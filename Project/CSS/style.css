@@ -1,0 +1,197 @@
+body
+{
+    font-family: 'Quicksand', sans-serif;
+}
+.container
+{
+	width: 600px;
+	margin: 0 auto;
+    text-align: center;
+	height: auto;
+    display: block;
+    border: 15px solid #54CA9E;
+    padding: 20px;
+    border-radius: 25px;   
+}
+.container2
+{
+    width: 1190px;
+    margin: 0 auto;
+    text-align: center;
+    height: 190px;
+    background-color: #54CA9E;
+}
+.form-logo
+{
+    margin-top: 10px;
+}
+.form-line
+{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    color: white;
+    margin-top: -1px;
+}
+.form-btn
+{
+    margin-top: 10px;
+}
+#form-btn2
+{
+    margin-left: 30px;
+}
+#form-btn3
+{
+    margin-left: 30px;
+}
+.form-text
+{
+    font-size: 35px;
+}
+.logo-img
+{
+    margin-top: 10px;
+}
+.line
+{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    color: #54CA9E;
+    margin-top: -1px;
+}
+.details
+{
+    text-align: left;
+    display: inline-grid;
+    font-size: 20px;
+    margin-top: 30px;
+}
+.address-box
+{
+    margin-bottom: 30px;
+    height: 85px;
+}
+#btn
+{
+    height: 35px;
+    width: 85px;
+}
+.input-style
+{
+    width: 400px;
+    height: 35px;
+    margin-bottom: 30px;
+}
+.select-style
+{
+    width: 100px;
+    margin-bottom: 30px;
+}
+.register-btn
+{
+    margin-bottom: 10px;
+    margin-left: 160px;
+    height: 35px;
+    width: 85px;
+}
+#register-btn:hover
+{
+    background-color: #C9CCD1;
+}
+#btn:hover
+{
+    background-color: #C9CCD1;
+}
+#sign-in
+{
+    border-radius: 20px;
+    margin-left: 8px;
+    padding: 5px;
+    color: black;
+    background-color: #C9CCD1;
+    text-decoration: none;
+}
+#text-signIn
+{
+    margin-top: 20px;
+    margin-bottom: 80px;
+    margin-left: 50px;
+    font-size: 15px;
+    color: blue;
+}
+.Profile-btn
+{
+    height: 33px;
+    margin-left: 160px;
+    width: 85px;
+}
+.Edit-btn
+{
+    margin-bottom: 10px;
+    margin-left: 160px;
+    width: 65px;
+}
+.Profile-text
+{
+    margin-top: -10px;
+    font-size: 40px;
+}
+.modify-btn
+{
+    margin-bottom: 100px;
+    margin-top: 50px;
+    margin-right: 20px; 
+}
+.btn-event
+{
+    margin-left: 50px;
+}
+.form-create
+{
+    display: inline-block;
+}
+.form-details
+{
+    text-align: left;
+    display: inline-grid;
+    font-size: 15px;
+}
+.radio-btn
+{
+    width: 200px;
+	margin: 0 auto;
+    text-align: left;
+    height: 80px;
+}
+.calender
+{
+    margin-left: 100px;
+    text-align: left;
+    margin-bottom: 30px;
+}
+#ProfileToList
+{
+    margin-bottom: 40px;
+    margin-left: 155px;
+    width: 75px;
+}
+.SignIn-btn
+{
+    margin-top: 20px;
+    margin-left: 20px;
+    display: inline-block;
+}
+#SignIn-btn2
+{
+    margin-left: 10px;
+}
+#SignIn-btn3
+{
+    margin-left: 10px;
+}
+#SignIn-btn4
+{
+    margin-left: 10px;
+}
+
+
