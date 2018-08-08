@@ -138,7 +138,7 @@ body
 }
 .modify-btn
 {
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     margin-top: 50px;
     margin-right: 20px; 
 }
@@ -177,21 +177,27 @@ body
 }
 .SignIn-btn
 {
-    margin-top: 20px;
-    margin-left: 20px;
+    margin-top: 30px;
+    margin-left: 100px;
     display: inline-block;
-}
-#SignIn-btn2
-{
-    margin-left: 10px;
-}
-#SignIn-btn3
-{
-    margin-left: 10px;
+    margin-bottom: 28px;
 }
 #SignIn-btn4
 {
+    margin-left: 30px;
+}
+.Logout-btn
+{
+    float: right;
+    margin-top: 10px;
+    margin-right: 70px;
+}
+#Logout-btn2
+{
     margin-left: 10px;
 }
-
+.ProfilePic-style
+{
+    margin-bottom: 30px;
+}
 

@@ -30,13 +30,11 @@ function SignIn()
         return false;
     }
 
-    alert("Login Successfully");
+    alert("Loged in Successfully");
 
     localStorage.setItem("id",Funame);
-
-    //ProfilePic(Funame);
-
-    //window.open("ProfilePage_ToDo.html","_self");
+    
+    window.location.href ="Form_ToDo.html";
 
 }
  
