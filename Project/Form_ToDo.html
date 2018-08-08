@@ -3,6 +3,7 @@
         <meta charset="UTF-8">
         <link href='./CSS/style.css' type='text/css' rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+        
     </head>
     <body>
         <div class="container2">
@@ -19,16 +20,24 @@
                 <button onclick="window.location.href='DeleteForm_ToDo.html'" id="form-btn2" type="submit">Delete</button>
                 <button onclick="window.location.href='SearchForm_ToDo.html'" id="form-btn3" type="submit">Search</button>
             </div> 
-            <p class="form-text"><b>Events List</b></p>
-            
-
-
-
+           
         </div>
-
-
-
+        <div class="container3">
+            <p class="form-text"><b>Events List</b></p>
+            <table id="tstyle">
+                <tr>
+                    <th> </th>
+                    <th >Task</th>
+                    <th>Description</th>
+                    <th>Type</th>
+                    <th>Due Date</th>
+                    <th>Status</th>
+                    <th> </th>
+                </tr>
+            </table>
+        </div>
     </body>
+    <script src="Javascript/Display-List_ToDo.js"> </script>
 </html>
 
 

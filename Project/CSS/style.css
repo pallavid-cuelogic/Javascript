@@ -21,6 +21,17 @@ body
     height: 190px;
     background-color: #54CA9E;
 }
+.container3
+{
+    width: 1190px;
+	margin: 0 auto;
+    text-align: center;
+	height: auto;
+    display: block;
+    border: 15px solid #54CA9E;
+    padding: 20px;
+    border-radius: 25px;   
+}
 .form-logo
 {
     margin-top: 10px;
@@ -46,7 +57,9 @@ body
 }
 .form-text
 {
+    margin-top: 0%;
     font-size: 35px;
+    margin-bottom: 0px;
 }
 .logo-img
 {
@@ -200,4 +213,15 @@ body
 {
     margin-bottom: 30px;
 }
+table
+{
+    border-collapse: collapse;
+    width: 100%;
+}
+td, th {
+    border: 1px solid black;
+    text-align: left;
+    padding: 8px;
+}
+
 

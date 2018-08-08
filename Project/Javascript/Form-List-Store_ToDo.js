@@ -4,13 +4,13 @@ function ListStore()
     var desc=document.getElementById("desc").value;
     var date=document.getElementById("date").value;
 
-    if(document.getElementById('public').checked)
+    if(document.getElementById('Public').checked)
     {
-        var category=document.getElementById("public").value;
+        var category=document.getElementById("Public").value;
     }
     else
     {
-        var category=document.getElementById("private").value;
+        var category=document.getElementById("Private").value;
     }
 
     var obj ={
