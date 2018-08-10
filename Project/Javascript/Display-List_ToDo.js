@@ -8,10 +8,12 @@ var task= JSON.parse(obj);
 console.log(task);
 
 len=task[0].ToDo.length;
-console.log(len);
-console.log(task[0].ToDo[0].tname);
+//console.log(len);
+//console.log(task[0].ToDo[0].tname);
 for(i=0;i<len;i++)
 {
+//    console.log(i);
+    
     var tbl_row=document.createElement("tr");
     
     var chk=document.createElement("input");
@@ -28,15 +30,26 @@ for(i=0;i<len;i++)
 
     var desc=document.createElement("td");
     desc.textContent=task[0].ToDo[i].desc;
+        
+    var btn1 = document.createElement("p");
+    var text1 = document.createTextNode(" Pending");
+    btn1.appendChild(text1);
+
+    var btn = document.createElement("BUTTON");
+    var text = document.createTextNode("Complete");
+    btn.appendChild(text);
 
     tbl_row.appendChild(chk);
     tbl_row.appendChild(tname);
     tbl_row.appendChild(desc);
     tbl_row.appendChild(category);
     tbl_row.appendChild(date);
+    tbl_row.appendChild(btn1);
+//    tbl_row.appendChild(btn);
+
 
     var tbl = document.getElementById("tstyle");
-    console.log(tbl);
+//    console.log(tbl);
 
     tbl.appendChild(tbl_row);
 
