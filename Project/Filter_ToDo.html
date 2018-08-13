@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href='./CSS/style.css' type='text/css' rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container2">
+            <image class="form-logo" src="./Images/logo.png" />
+            <p class="form-line">Grab Your Events in Time</p>
+        </div> 
+
+        <div class="container5">   
+            <p class="form-text"><b>Filter Events List</b></p>
+                
+            <div class="modify-btn">
+                <button onclick="filterButton()" type="submit" id="filterBtn">Filter</button>
+                <button class="filter-btn" onclick="categoryButton()" type="button" id="category"  >FilterBy Category</button>
+                <button onclick="statusButton()" type="button" id="status">FilterBy Status</button>
+                <button class="btn-event" onclick="window.location.href='Form_ToDo.html'" type="submit">Back</button>
+            </div>
+
+            <div> 
+                <div id="categorySelect">   
+                    <label for="category"><b>Category</b></label>   
+                    <select onchange="filter_updateToDo(1)" id="category1">
+                        <option value="Public">Public</option>
+                        <option value="Private">Private</option>
+                        <option value="Work">Work</option>
+                        <option value="Study">Study</option>
+                    </select>
+                </div>
+
+                <div id="statusSelect">
+                    <label for="status"><b>Status</b></label>   
+                    <select onchange="filter_updateToDo(2)" id="status1">
+                        <option value="Pending">Pending</option>
+                        <option value="Completed">Completed</option>
+                    </select>
+                </div>
+            </div>
+
+            <table id="tstyle1">
+                <tr>
+                    <th >Task</th>
+                    <th>Description</th>
+                    <th>Type</th>
+                    <th>Due Date</th>
+                    <th>Status</th>
+                </tr>
+            </table>
+
+        </div>
+    </body>
+    <script src="Javascript/Filter_ToDo.js"> </script>
+</html>

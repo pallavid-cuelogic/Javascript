@@ -13,6 +13,5 @@
     document.getElementById("lName").value=obj[0].lname;
     document.getElementById("Pwd").value=obj[0].pwd;
     document.getElementById("Addr").value=obj[0].addr;
-
-
+    document.getElementById("user-img").src=localStorage.getItem("img");
 

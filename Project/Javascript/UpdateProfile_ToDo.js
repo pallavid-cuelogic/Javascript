@@ -1,4 +1,3 @@
-      
     var text = localStorage.getItem("id");   
 
     console.log(text);  
@@ -47,8 +46,5 @@ function Display()
         window.location.href ="ProfilePage_ToDo.html";
     }
 
-
 }          
-
-
 

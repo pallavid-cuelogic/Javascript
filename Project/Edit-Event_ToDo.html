@@ -3,7 +3,6 @@
         <meta charset="UTF-8">
         <link href='./CSS/style.css' type='text/css' rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-        <script src="Javascript/Form-List-Store_ToDo.js"> </script>
     </head>
     <body>
         <div class="container2">
@@ -23,20 +22,22 @@
                 <p><b>Due Date:</b></p>
                 <input type="date" id="date" required >
             </div>          
-
+            <lable for="cat"  readonly><b>Category</b></lable>
+            <input type="text" id="cat">
+                
             <div class="radio-btn" >
                 <input type="radio" name="cat" value="Public" id="Public">Public<br>
                 <input type="radio" name="cat" value="Private" id="Private">Private<br>
-                <input type="radio" name="cat" value="Work" id="Work">Work<br>
-                <input type="radio" name="cat" value="Study" id="Study">Study<br>
             </div>
             
             <div class="modify-btn">
-                <button onclick="ListStore()" type="submit">Create</button>
-                <button class="btn-event" onclick="window.location.href='Form_ToDo.html'" type="submit">Back</button>
+                <button onclick="updateToDo()" type="submit">Update</button>
+                <button id="Update-back" onclick="window.location.href='Form_ToDo.html'" type="submit">Back</button>
             </div> 
         </div>
     </body>
+    <script src="Javascript/Edit-Event_ToDo.js"> </script>
+
 </html>
 
 

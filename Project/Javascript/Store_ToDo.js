@@ -2,7 +2,7 @@ function Store()
 {
     var arr = [];
 
-//    localStorage.clear();
+//   localStorage.clear();
 
     var uname=document.getElementById("uName").value;
     var fname=document.getElementById("fName").value;
@@ -55,12 +55,12 @@ function Store()
         myObj = JSON.stringify(arr);   
         localStorage.setItem(document.getElementById("uName").value,myObj);
         localStorage.setItem("id",uname);
-        localStorage.removeItem("img");     
+    //    localStorage.removeItem("img");     
         window.open("Form_ToDo.html","_self");
     }
     else if(object!=null)
     {
         alert("User Id Already Exits...");
     }
-  
+ 
 }

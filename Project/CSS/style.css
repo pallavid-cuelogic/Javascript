@@ -13,6 +13,17 @@ body
     padding: 20px;
     border-radius: 25px;   
 }
+.container4
+{
+	width: 600px;
+	margin: 0 auto;
+    text-align: center;
+	height: auto;
+    display: block;
+    border: 10px solid #54CA9E;
+    padding: 20px;
+    border-radius: 25px;   
+}
 .container2
 {
     width: 1190px;
@@ -24,6 +35,17 @@ body
 .container3
 {
     width: 1190px;
+	margin: 0 auto;
+    text-align: center;
+	height: auto;
+    display: block;
+    border: 15px solid #54CA9E;
+    padding: 20px;
+    border-radius: 25px;   
+}
+.container5
+{
+	width: 800px;
 	margin: 0 auto;
     text-align: center;
 	height: auto;
@@ -152,12 +174,12 @@ body
 .modify-btn
 {
     margin-bottom: 50px;
-    margin-top: 50px;
+    margin-top: 45px;
     margin-right: 20px; 
 }
 .btn-event
 {
-    margin-left: 50px;
+    margin-left: 30px;
 }
 .form-create
 {
@@ -173,8 +195,7 @@ body
 {
     width: 200px;
 	margin: 0 auto;
-    text-align: left;
-    height: 80px;
+    height: 90px;
 }
 .calender
 {
@@ -218,10 +239,45 @@ table
     border-collapse: collapse;
     width: 100%;
 }
-td, th {
-    border: 1px solid black;
+td, th
+{
+    border: 2px solid black;
     text-align: left;
     padding: 8px;
 }
-
-
+#tstyle
+{
+    margin-left: 60px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#cat
+{
+    margin-bottom: 20px;
+}
+#Update-back
+{
+    margin-left: 10px;
+}
+#tstyle1
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#todo-style
+{
+    width: 250px;
+    height: 35px;
+}
+#todo-input
+{
+    margin-top: 20px;
+}
+.filter-btn
+{
+    margin-left: 30px;
+}
+#category
+{
+   
+}

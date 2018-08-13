@@ -3,22 +3,32 @@ function ListStore()
     var tname=document.getElementById("tname").value;
     var desc=document.getElementById("desc").value;
     var date=document.getElementById("date").value;
-    var 
+    var status = "Pending";
 
     if(document.getElementById('Public').checked)
     {
         var category=document.getElementById("Public").value;
     }
-    else
+    else if(document.getElementById('Private').checked)
     {
         var category=document.getElementById("Private").value;
     }
+    else if(document.getElementById('Work').checked)
+    {
+        var category=document.getElementById("Work").value;
+    }
+    else 
+    {
+        var category=document.getElementById("Study").value;
+    }
 
-    var obj ={
+    var obj =
+    {
         tname : tname,
         desc : desc,
         date : date,
-        category : category
+        category : category,
+        status : status
     };
  
     var text = localStorage.getItem("id");   

@@ -40,5 +40,3 @@ function Validate(name,fname,lname,pwd)
     return true;
 }
  
-
-

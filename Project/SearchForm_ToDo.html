@@ -3,27 +3,40 @@
         <meta charset="UTF-8">
         <link href='./CSS/style.css' type='text/css' rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+        <script src="Javascript/Search_ToDo.js"> </script>
     </head>
     <body>
         <div class="container2">
             <image class="form-logo" src="./Images/logo.png" />
             <p class="form-line">Grab Your Events in Time</p>
         </div> 
-        <div class="container">   
+
+        <div class="container5">   
             <p class="form-text"><b>Search Events List</b></p>
+            <div id="todo-input">
+                <label for="tname"><b>Search Here</b></label>
+                <input type="text" placeholder="Enter Task Name" id="tname" >             
+            </div>
 
             <div class="modify-btn">
-                <button type="submit">Search</button>
+                <button onclick="search()" type="submit">Search</button>
                 <button class="btn-event" onclick="window.location.href='Form_ToDo.html'" type="submit">Back</button>
             </div> 
-
-
+            
+            <table id="tstyle1">
+                <tr>
+                    <th> </th>
+                    <th >Task</th>
+                    <th>Description</th>
+                    <th>Type</th>
+                    <th>Due Date</th>
+                    <th>Status</th>
+                </tr>
+            </table>
 
         </div>
-
-
-
     </body>
+    <script src="Javascript/Search_ToDo.js"> </script>
 </html>
 
 
