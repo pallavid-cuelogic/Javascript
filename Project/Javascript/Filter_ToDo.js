@@ -1,4 +1,4 @@
-///////animation logic//////
+//////animation logic//////
 
 document.getElementById('filterBtn').style.display="inline";
 document.getElementById("category").style.display="none";
@@ -35,8 +35,6 @@ function filter_updateToDo(option)
 
     len=task.ToDo.length;
    
-    console.log("length="+len);
-
     var tb = document.getElementById('tstyle1');
     while(tb.rows.length > 1) 
     {
@@ -49,7 +47,7 @@ function filter_updateToDo(option)
        
         for(i=0;i<len;i++)
         {
-            console.log(cat);
+            //console.log(cat);
             if(task.ToDo[i].category == cat)
             {
                 var tbl_row=document.createElement("tr");
@@ -60,7 +58,7 @@ function filter_updateToDo(option)
                 var category=document.createElement("td");
                 category.textContent=task.ToDo[i].category;
             //
-                console.log(category);
+                //console.log(category);
 
                 var date=document.createElement("td");
                 date.textContent=task.ToDo[i].date;
@@ -72,7 +70,7 @@ function filter_updateToDo(option)
                 state.textContent=task.ToDo[i].status;
                 state.setAttribute("id",i);
             //                
-                console.log(state);
+                //console.log(state);
                 
                 var btn = document.createElement("BUTTON");
                 var text = document.createTextNode("Complete");
@@ -95,15 +93,14 @@ function filter_updateToDo(option)
         }
     }
 
-    else
+    else if(option == 2 )
     { 
-        var state=document.getElementById("status1").value;
-       
+        var state1=document.getElementById("status1").value;
+      
         for(i=0;i<len;i++)
         {
-            console.log(state);
-            if(task.ToDo[i].status == state)
-            {
+            if(task.ToDo[i].status == state1)
+            {   
                 var tbl_row=document.createElement("tr");
             //    
                 tname=document.createElement("td");
@@ -112,7 +109,7 @@ function filter_updateToDo(option)
                 var category=document.createElement("td");
                 category.textContent=task.ToDo[i].category;
             //
-                console.log(category);
+               // console.log(category);
 
                 var date=document.createElement("td");
                 date.textContent=task.ToDo[i].date;
@@ -124,7 +121,7 @@ function filter_updateToDo(option)
                 state.textContent=task.ToDo[i].status;
                 state.setAttribute("id",i);
             //                
-                console.log(state);
+               // console.log(state);
                 
                 var btn = document.createElement("BUTTON");
                 var text = document.createTextNode("Complete");
@@ -153,14 +150,14 @@ function UpdateStatus1(id1)
     document.getElementById(id1).innerHTML="Completed";
 
     var text = localStorage.getItem("id");   
-    console.log(text);  
+    //console.log(text);  
         
     var t=localStorage.getItem(text);
     var obj= JSON.parse(t); 
 
-    console.log(obj);  
+   // console.log(obj);  
 
-    console.log(id1);
+   // console.log(id1);
     
     var tname = obj.ToDo[id1].tname;
     var desc = obj.ToDo[id1].desc;

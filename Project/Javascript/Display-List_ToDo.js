@@ -99,17 +99,17 @@ function deleteTodo()
     for(var i=0;i<len;i++)
     {
        if(document.getElementById("checkbox"+i).checked)
-       {
+       {    
             delArray.push(i);
        } 
     }
 
     delArrayLength = delArray.length;
     
-    for(k=delArrayLength;k>0;k--)
+    for(k=delArrayLength-1;k>=0;k--)
     {
         task.ToDo.splice(delArray[k],1);
-        document.getElementById('tstyle').deleteRow(k);
+        document.getElementById('tstyle').deleteRow(delArray[k]);
         var obj =
         {
             uname : task.uname,
@@ -131,4 +131,3 @@ function filter()
 {
     window.location.href ="Filter_ToDo.html";
 }
-

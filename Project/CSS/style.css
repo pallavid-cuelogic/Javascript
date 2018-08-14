@@ -42,7 +42,7 @@ body
 }
 .container3
 {
-    width: 1190px;
+    width: 1000px;
 	margin: 0 auto;
     text-align: center;
 	height: auto;
@@ -228,15 +228,14 @@ body
 {
     margin-left: 30px;
 }
-.Logout-btn
+#Logout-btn
 {
-    float: right;
-    margin-top: 10px;
-    margin-left: 70px;
+    margin-top: 5px;
+    text-align: center;
 }
 #Logout-btn2
 {
-    margin-left: 10px;
+    margin-left: 20px;
 }
 .ProfilePic-style
 {
@@ -285,3 +284,8 @@ td, th
 {
     margin-left: 30px;
 }
+.userpic
+{
+    text-align: center;
+}
+
