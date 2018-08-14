@@ -8,10 +8,10 @@
 
     console.log(obj);  
 
-    document.getElementById("uName").value=obj[0].uname;
-    document.getElementById("fName").value=obj[0].fname;
-    document.getElementById("lName").value=obj[0].lname;
-    document.getElementById("Pwd").value=obj[0].pwd;
-    document.getElementById("Addr").value=obj[0].addr;
+    document.getElementById("uName").value=obj.uname;
+    document.getElementById("fName").value=obj.fname;
+    document.getElementById("lName").value=obj.lname;
+    document.getElementById("Pwd").value=obj.pwd;
+    document.getElementById("Addr").value=obj.addr;
     document.getElementById("user-img").src=localStorage.getItem("img");
 

@@ -24,7 +24,9 @@ function SignIn()
         return false;
     }
 
-    if(obj[0].pwd!=Fpwd)
+    console.log(obj);
+
+    if(obj.pwd!=Fpwd)
     {
         alert("Invalid Password...");
         return false;

@@ -11,11 +11,11 @@ function search()
     var obj=localStorage.getItem(uname);
     var task= JSON.parse(obj); 
 
-    len=task[0].ToDo.length;
+    len=task.ToDo.length;
 
     for(i=0;i<len;i++)
     {
-        if(task[0].ToDo[i].tname == tname)
+        if(task.ToDo[i].tname == tname)
         {
             var tbl_row=document.createElement("tr");
             //    
@@ -25,18 +25,18 @@ function search()
                 chk.setAttribute("onCheck","Select(this.id)");
             //
                 tname=document.createElement("td");
-                tname.textContent=task[0].ToDo[i].tname;
+                tname.textContent=task.ToDo[i].tname;
                 var category=document.createElement("td");
-                category.textContent=task[0].ToDo[i].category;
+                category.textContent=task.ToDo[i].category;
             //
                 var date=document.createElement("td");
-                date.textContent=task[0].ToDo[i].date;
+                date.textContent=task.ToDo[i].date;
             //
                 var desc=document.createElement("td");
-                desc.textContent=task[0].ToDo[i].desc;
+                desc.textContent=task.ToDo[i].desc;
             //
                 var state = document.createElement("td");
-                state.textContent=task[0].ToDo[i].status;
+                state.textContent=task.ToDo[i].status;
                 state.setAttribute("id",i);
             //
                 tbl_row.appendChild(chk);

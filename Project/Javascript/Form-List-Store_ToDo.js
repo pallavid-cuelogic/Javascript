@@ -42,7 +42,11 @@ function ListStore()
 
     console.log(t);
    
-    task[0].ToDo.push(obj);
+    console.log(task);
+//    console.log(task[0]);
+    console.log(task.ToDo);
+
+    task.ToDo.push(obj);
 
     alert("Event Created Successfully");
     

@@ -24,6 +24,14 @@ body
     padding: 20px;
     border-radius: 25px;   
 }
+.container6
+{
+	width: 1600px;
+	margin: 0 auto;
+    text-align: center;
+	height: auto;
+    display: block;
+}
 .container2
 {
     width: 1190px;
@@ -224,7 +232,7 @@ body
 {
     float: right;
     margin-top: 10px;
-    margin-right: 70px;
+    margin-left: 70px;
 }
 #Logout-btn2
 {
@@ -276,8 +284,4 @@ td, th
 .filter-btn
 {
     margin-left: 30px;
-}
-#category
-{
-   
 }

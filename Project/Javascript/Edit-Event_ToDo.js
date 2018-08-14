@@ -10,10 +10,10 @@ var id = localStorage.getItem("Event-id");
 
 console.log(id);
 
-document.getElementById("tname").value=obj[0].ToDo[id].tname;
-document.getElementById("desc").value=obj[0].ToDo[id].desc;
-document.getElementById("date").value=obj[0].ToDo[id].date;
-document.getElementById("cat").value=obj[0].ToDo[id].category;
+document.getElementById("tname").value=obj.ToDo[id].tname;
+document.getElementById("desc").value=obj.ToDo[id].desc;
+document.getElementById("date").value=obj.ToDo[id].date;
+document.getElementById("cat").value=obj.ToDo[id].category;
 
 if(document.getElementById('Public').checked)
 {
@@ -42,13 +42,12 @@ else
 
 function updateToDo()
 {
-    var arr = [];
-
     tname = document.getElementById("tname").value;
     desc = document.getElementById("desc").value;  
     date = document.getElementById("date").value; 
     cat = document.getElementById("cat").value;
-
+    var status=obj.ToDo[id].status;
+     
     var obj1 ={
         tname : tname,
         desc : desc,
@@ -57,7 +56,7 @@ function updateToDo()
         status : status
     };
 
-    obj[0].ToDo[id]=obj1;
+    obj.ToDo[id]=obj1;
 
     alert("Event Updated Successfully");
 

@@ -1,7 +1,6 @@
 function Store()
 {
-    var arr = [];
-
+    
 //   localStorage.clear();
 
     var uname=document.getElementById("uName").value;
@@ -51,16 +50,14 @@ function Store()
     if(object==null && Check==true)
     {
         alert("Registered Successfully");
-        arr.push(obj);
-        myObj = JSON.stringify(arr);   
+        myObj = JSON.stringify(obj);   
         localStorage.setItem(document.getElementById("uName").value,myObj);
         localStorage.setItem("id",uname);
-    //    localStorage.removeItem("img");     
         window.open("Form_ToDo.html","_self");
     }
     else if(object!=null)
     {
         alert("User Id Already Exits...");
     }
- 
+
 }

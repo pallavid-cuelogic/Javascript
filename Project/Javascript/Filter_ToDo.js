@@ -33,7 +33,7 @@ function filter_updateToDo(option)
     var obj=localStorage.getItem(uname);
     var task= JSON.parse(obj); 
 
-    len=task[0].ToDo.length;
+    len=task.ToDo.length;
    
     console.log("length="+len);
 
@@ -50,26 +50,26 @@ function filter_updateToDo(option)
         for(i=0;i<len;i++)
         {
             console.log(cat);
-            if(task[0].ToDo[i].category == cat)
+            if(task.ToDo[i].category == cat)
             {
                 var tbl_row=document.createElement("tr");
             //    
                 tname=document.createElement("td");
-                tname.textContent=task[0].ToDo[i].tname;
+                tname.textContent=task.ToDo[i].tname;
             //
                 var category=document.createElement("td");
-                category.textContent=task[0].ToDo[i].category;
+                category.textContent=task.ToDo[i].category;
             //
                 console.log(category);
 
                 var date=document.createElement("td");
-                date.textContent=task[0].ToDo[i].date;
+                date.textContent=task.ToDo[i].date;
             //
                 var desc=document.createElement("td");
-                desc.textContent=task[0].ToDo[i].desc;
+                desc.textContent=task.ToDo[i].desc;
             //
                 var state = document.createElement("td");
-                state.textContent=task[0].ToDo[i].status;
+                state.textContent=task.ToDo[i].status;
                 state.setAttribute("id",i);
             //                
                 console.log(state);
@@ -77,7 +77,7 @@ function filter_updateToDo(option)
                 var btn = document.createElement("BUTTON");
                 var text = document.createTextNode("Complete");
                 btn.setAttribute("id",i);
-                btn.setAttribute("onClick","UpdateStatus(this.id)");
+                btn.setAttribute("onClick","UpdateStatus1(this.id)");
             //
                 btn.appendChild(text);
     
@@ -95,33 +95,33 @@ function filter_updateToDo(option)
         }
     }
 
-    if(option == 2)
+    else
     { 
         var state=document.getElementById("status1").value;
        
         for(i=0;i<len;i++)
         {
             console.log(state);
-            if(task[0].ToDo[i].status == state)
+            if(task.ToDo[i].status == state)
             {
                 var tbl_row=document.createElement("tr");
             //    
                 tname=document.createElement("td");
-                tname.textContent=task[0].ToDo[i].tname;
+                tname.textContent=task.ToDo[i].tname;
             //
                 var category=document.createElement("td");
-                category.textContent=task[0].ToDo[i].category;
+                category.textContent=task.ToDo[i].category;
             //
                 console.log(category);
 
                 var date=document.createElement("td");
-                date.textContent=task[0].ToDo[i].date;
+                date.textContent=task.ToDo[i].date;
             //
                 var desc=document.createElement("td");
-                desc.textContent=task[0].ToDo[i].desc;
+                desc.textContent=task.ToDo[i].desc;
             //
                 var state = document.createElement("td");
-                state.textContent=task[0].ToDo[i].status;
+                state.textContent=task.ToDo[i].status;
                 state.setAttribute("id",i);
             //                
                 console.log(state);
@@ -129,7 +129,7 @@ function filter_updateToDo(option)
                 var btn = document.createElement("BUTTON");
                 var text = document.createTextNode("Complete");
                 btn.setAttribute("id",i);
-                btn.setAttribute("onClick","UpdateStatus(this.id)");
+                btn.setAttribute("onClick","UpdateStatus1(this.id)");
             //
                 btn.appendChild(text);
 
@@ -162,10 +162,10 @@ function UpdateStatus1(id1)
 
     console.log(id1);
     
-    var tname = obj[0].ToDo[id1].tname;
-    var desc = obj[0].ToDo[id1].desc;
-    var date = obj[0].ToDo[id1].date;
-    var cat = obj[0].ToDo[id1].category;
+    var tname = obj.ToDo[id1].tname;
+    var desc = obj.ToDo[id1].desc;
+    var date = obj.ToDo[id1].date;
+    var cat = obj.ToDo[id1].category;
     var status = "Completed";
     
     var obj1 ={
@@ -176,7 +176,7 @@ function UpdateStatus1(id1)
         status : status
     };
 
-    obj[0].ToDo[id1]=obj1;
+    obj.ToDo[id1]=obj1;
 
     myObj = JSON.stringify(obj);   
     localStorage.setItem(text,myObj);
@@ -203,24 +203,23 @@ function deleteTodo()
     
     for(k=delArrayLength;k>0;k--)
     {
-        var arr = [];
-        task[0].ToDo.splice(delArray[k],1);
+        task.ToDo.splice(delArray[k],1);
         document.getElementById('tstyle').deleteRow(k);
         var obj =
         {
-            uname : task[0].uname,
-            fname : task[0].fname,
-            lname : task[0].lname,
-            pwd : task[0].pwd,
-            addr : task[0].addr,
-            gen : task[0].gen,
-            img : task[0].img,
-            ToDo : task[0].ToDo
+            uname : task.uname,
+            fname : task.fname,
+            lname : task.lname,
+            pwd : task.pwd,
+            addr : task.addr,
+            gen : task.gen,
+            img : task.img,
+            ToDo : task.ToDo
         };
         
-        arr.push(obj);
+//        arr.push(obj);
         
-        localStorage.setItem(uname,JSON.stringify(arr));
+        localStorage.setItem(uname,JSON.stringify(obj));
         location.reload();
     }    
 }
