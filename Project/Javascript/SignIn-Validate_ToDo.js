@@ -2,16 +2,16 @@ function SignIn()
 {
     var uname=document.getElementById("uName").value;
     var pwd=document.getElementById("pwd").value;
-alert("in");
+
     if(uname=="")
     {
-        alert("Enter User Id...");
+        alert("Enter Email");
         return false;
     }
 
     if(pwd=="")
     {
-        alert("Enter Password...");
+        alert("Enter password.");
         return false;
     }
 
@@ -20,7 +20,7 @@ alert("in");
     
     if(obj==null)
     {
-        alert("Email doesn't Exists...")
+        alert("Email doesn't exists.")
         return false;
     }
  
@@ -33,6 +33,5 @@ alert("in");
     localStorage.setItem("id",uname);
     
     window.location.href ="Form_ToDo.html";
-
 }
  
