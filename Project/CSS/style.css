@@ -42,7 +42,7 @@ body
 }
 .container3
 {
-    width: 1000px;
+    width: 950px;
 	margin: 0 auto;
     text-align: center;
 	height: auto;
@@ -171,7 +171,7 @@ body
 .Edit-btn
 {
     margin-bottom: 10px;
-    margin-left: 160px;
+    margin-left: 70px;
     width: 65px;
 }
 .Profile-text
@@ -184,10 +184,6 @@ body
     margin-bottom: 50px;
     margin-top: 45px;
     margin-right: 20px; 
-}
-.btn-event
-{
-    margin-left: 30px;
 }
 .form-create
 {
@@ -214,7 +210,7 @@ body
 #ProfileToList
 {
     margin-bottom: 40px;
-    margin-left: 155px;
+    margin-left: 65px;
     width: 75px;
 }
 .SignIn-btn
@@ -254,17 +250,11 @@ td, th
 }
 #tstyle
 {
-    margin-left: 60px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 0 auto;
 }
 #cat
 {
     margin-bottom: 20px;
-}
-#Update-back
-{
-    margin-left: 10px;
 }
 #tstyle1
 {
@@ -282,10 +272,33 @@ td, th
 }
 .filter-btn
 {
-    margin-left: 30px;
+    margin-left: 800px;
 }
 .userpic
 {
     text-align: center;
 }
-
+#user-img
+{
+    margin-bottom: 20px;
+}
+#th1
+{
+    width : 30px;
+}
+#th2
+{
+    width : 60px;
+}
+#th3
+{
+    width : 100px;
+}
+#filterbtn
+{
+    margin-left: 30px;
+}
+.cat1
+{
+    margin-left: 850px;
+}

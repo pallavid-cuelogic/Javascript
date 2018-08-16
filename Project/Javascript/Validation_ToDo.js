@@ -6,7 +6,7 @@ function Validate(name,fname,lname,pwd)
 
    if(!name.match(filter))
     {
-        alert("Invalid User Id");
+        alert("Invalid email.");
         name.focus;
         return false;        
     }

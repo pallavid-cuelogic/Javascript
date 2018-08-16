@@ -49,7 +49,6 @@ function Store()
 
     if(object==null && Check==true)
     {
-        alert("Registered Successfully");
         myObj = JSON.stringify(obj);   
         localStorage.setItem(document.getElementById("uName").value,myObj);
         localStorage.setItem("id",uname);
@@ -57,7 +56,7 @@ function Store()
     }
     else if(object!=null)
     {
-        alert("User Id Already Exits...");
+        alert("Email Already Exits.");
     }
 
 }

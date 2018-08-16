@@ -1,40 +1,36 @@
 function SignIn()
 {
-    var Funame=document.getElementById("uName").value;
-    var Fpwd=document.getElementById("pwd").value;
+    var uname=document.getElementById("uName").value;
+    var pwd=document.getElementById("pwd").value;
 
-    if(Funame=="")
+    if(uname=="")
     {
         alert("Enter User Id...");
         return false;
     }
 
-    if(Fpwd=="")
+    if(pwd=="")
     {
         alert("Enter Password...");
         return false;
     }
 
-    var text = localStorage.getItem(Funame);   
+    var text = localStorage.getItem(uname);   
     var obj= JSON.parse(text);   
     
     if(obj==null)
     {
-        alert("User Id doesn't Exists...")
+        alert("Email doesn't Exists...")
         return false;
     }
-
-    console.log(obj);
-
-    if(obj.pwd!=Fpwd)
+ 
+    if(obj.pwd!=pwd)
     {
-        alert("Invalid Password...");
+        alert("Email doesn't Exists.");
         return false;
     }
-
-    alert("Loged in Successfully");
-
-    localStorage.setItem("id",Funame);
+    
+    localStorage.setItem("id",uname);
     
     window.location.href ="Form_ToDo.html";
 

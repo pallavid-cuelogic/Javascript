@@ -27,13 +27,9 @@ for(i=0;i<len;i++)
 //
     var state = document.createElement("td");
     state.textContent=task.ToDo[i].status;
-    state.setAttribute("id",i);
+    state.setAttribute("id","s"+i);
 //
-    var btn = document.createElement("BUTTON");
-    var text = document.createTextNode("Complete");
-    btn.appendChild(text);
-    btn.setAttribute("id",i);
-    btn.setAttribute("onClick","UpdateStatus(this.id)");
+   
 //
     var ebtn = document.createElement("BUTTON");
     var etext = document.createTextNode("Edit");
@@ -47,44 +43,60 @@ for(i=0;i<len;i++)
     tbl_row.appendChild(category);
     tbl_row.appendChild(date);
     tbl_row.appendChild(state);
-    tbl_row.appendChild(btn);
+
+    if(task.ToDo[i].status == "Pending")
+    {
+        var btn = document.createElement("BUTTON");
+        var text = document.createTextNode("Complete");
+        btn.appendChild(text);
+        btn.setAttribute("id",i);
+        btn.setAttribute("onClick","UpdateStatus(this.id)");
+        tbl_row.appendChild(btn);
+    }
+    
     tbl_row.appendChild(ebtn);
 
     var tbl = document.getElementById("tstyle");
-
     tbl.appendChild(tbl_row);
 }
 
 function UpdateStatus(id1)
 {
-    document.getElementById(id1).innerHTML="Completed";
+    var btn = document.createElement("BUTTON");
+    var result= confirm("Sure want to update status ?");
+    if(result==true)
+    {
+        document.getElementById("s"+id1).innerHTML="Completed";
+   
+        document.getElementById(id1).style.display="none";
 
-    var text = localStorage.getItem("id");   
-    console.log(text);  
+        var text = localStorage.getItem("id");   
+        console.log(text);  
+            
+        var t=localStorage.getItem(text);
+        var obj= JSON.parse(t); 
+
+        console.log(id1);
         
-    var t=localStorage.getItem(text);
-    var obj= JSON.parse(t); 
+        var tname = obj.ToDo[id1].tname;
+        var desc = obj.ToDo[id1].desc;
+        var date = obj.ToDo[id1].date;
+        var cat = obj.ToDo[id1].category;
+        var status = "Completed";
+        
+        var obj1 ={
+            tname : tname,
+            desc : desc,
+            date : date,
+            category : cat,
+            status : status
+        };
 
-    console.log(id1);
-    
-    var tname = obj.ToDo[id1].tname;
-    var desc = obj.ToDo[id1].desc;
-    var date = obj.ToDo[id1].date;
-    var cat = obj.ToDo[id1].category;
-    var status = "Completed";
-    
-    var obj1 ={
-        tname : tname,
-        desc : desc,
-        date : date,
-        category : cat,
-        status : status
-    };
+        obj.ToDo[id1]=obj1;
 
-    obj.ToDo[id1]=obj1;
-
-    myObj = JSON.stringify(obj);   
-    localStorage.setItem(text,myObj);
+        myObj = JSON.stringify(obj);   
+        localStorage.setItem(text,myObj);
+    }
 }
 
 function EditEvent(id)
@@ -124,10 +136,14 @@ function deleteTodo()
         
         localStorage.setItem(uname,JSON.stringify(obj));
         location.reload();
+        document.getElementById("chk0").checked=false;
     }    
 }   
 
-function filter()
+function deleteAll()
 {
-    window.location.href ="Filter_ToDo.html";
+    for(i=0;i<len;i++)
+    {
+        document.getElementById("checkbox"+i).checked=true;
+    }
 }

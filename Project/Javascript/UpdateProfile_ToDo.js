@@ -53,10 +53,19 @@ function Display()
 
     if(Check==true)
     {
-        alert("Updated Successfully");
         myObj = JSON.stringify(obj1);   
         localStorage.setItem(document.getElementById("uName").value,myObj);
-        window.location.href ="ProfilePage_ToDo.html";
+        alert("wait");
+        if(pwd != obj.pwd)
+        {
+            alert("Password is changed");
+            localStorage.setItem("id",null);
+            window.location.href ="Sign-In_ToDo.html";
+        }
+        else
+        {
+            window.location.href ="ProfilePage_ToDo.html";
+        }
     }
 
 }          

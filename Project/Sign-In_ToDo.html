@@ -9,14 +9,16 @@
         <div class="container">
             <image class="logo-img" src="./Images/logo.png" />
             <p class="line">Grab Your Events in Time</p>
+            <form onsubmit="SignIn()">
             <div class="details">
                 <label for="uName"><b>User Name</b></label>
                 <input class="input-style" type="text" placeholder="e.g.  DennisRitchie@gmail.com" id="uName" required>
                 <label for="pwd"><b>Password</b></label>
                 <input class="input-style" type="password" placeholder="*****" id="pwd" required>
                 <div class="SignIn-btn">
-                    <button onclick="SignIn()" type="button" >Login</button>    
-                    <button id="SignIn-btn4" onclick="window.location.href='SignUp_ToDo.html'"  type="button">Sign Up</button>    
+                <button onclick="SignIn()" type="submit" >Login</button>    
+                <button id="SignIn-btn4" onclick="window.location.href='SignUp_ToDo.html'"  type="button">Sign Up</button>    
+            </form>
                 </div>
             </div>       
         </div>    

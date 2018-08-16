@@ -33,24 +33,15 @@ function ListStore()
  
     var text = localStorage.getItem("id");   
 
-    console.log(text);  
-    
     var t=localStorage.getItem(text);
     var task= JSON.parse(t); 
-
-    console.log(obj);
-
-    console.log(t);
-   
-    console.log(task);
-//    console.log(task[0]);
-    console.log(task.ToDo);
-
+ 
     task.ToDo.push(obj);
 
-    alert("Event Created Successfully");
-    
     myObj = JSON.stringify(task);   
     localStorage.setItem(text,myObj);
+
+    window.location.href ="Form_ToDo.html";
+
 }
 

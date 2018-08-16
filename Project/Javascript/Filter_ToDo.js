@@ -35,7 +35,7 @@ function filter_updateToDo(option)
 
     len=task.ToDo.length;
    
-    var tb = document.getElementById('tstyle1');
+    var tb = document.getElementById('tstyle');
     while(tb.rows.length > 1) 
     {
         tb.deleteRow(1);
@@ -46,20 +46,22 @@ function filter_updateToDo(option)
         var cat=document.getElementById("category1").value;
        
         for(i=0;i<len;i++)
-        {
-            //console.log(cat);
+        {            
             if(task.ToDo[i].category == cat)
             {
                 var tbl_row=document.createElement("tr");
-            //    
+//    
+                var chk=document.createElement("input");
+                chk.setAttribute("type","checkbox");
+                chk.setAttribute("id","checkbox"+i);
+//                document.getElementById("checkbox"+i).style.display="none";
+
+            //
                 tname=document.createElement("td");
                 tname.textContent=task.ToDo[i].tname;
-            //
                 var category=document.createElement("td");
                 category.textContent=task.ToDo[i].category;
             //
-                //console.log(category);
-
                 var date=document.createElement("td");
                 date.textContent=task.ToDo[i].date;
             //
@@ -68,26 +70,34 @@ function filter_updateToDo(option)
             //
                 var state = document.createElement("td");
                 state.textContent=task.ToDo[i].status;
-                state.setAttribute("id",i);
-            //                
-                //console.log(state);
-                
-                var btn = document.createElement("BUTTON");
-                var text = document.createTextNode("Complete");
-                btn.setAttribute("id",i);
-                btn.setAttribute("onClick","UpdateStatus1(this.id)");
+                state.setAttribute("id","s"+i);
             //
-                btn.appendChild(text);
-    
+                var ebtn = document.createElement("BUTTON");
+                var etext = document.createTextNode("Edit");
+                ebtn.appendChild(etext);
+                ebtn.setAttribute("id",i);
+                ebtn.setAttribute("onClick","EditEvent(this.id)");
+
+                tbl_row.appendChild(chk);
                 tbl_row.appendChild(tname);
                 tbl_row.appendChild(desc);
                 tbl_row.appendChild(category);
                 tbl_row.appendChild(date);
                 tbl_row.appendChild(state);
-                tbl_row.appendChild(btn);
+
+                if(task.ToDo[i].status == "Pending")
+                {
+                    var btn = document.createElement("BUTTON");
+                    var text = document.createTextNode("Complete");
+                    btn.appendChild(text);
+                    btn.setAttribute("id",i);
+                    btn.setAttribute("onClick","UpdateStatus(this.id)");
+                    tbl_row.appendChild(btn);
+                }
                 
-                var tbl = document.getElementById("tstyle1");
-    
+                tbl_row.appendChild(ebtn);
+
+                var tbl = document.getElementById("tstyle");
                 tbl.appendChild(tbl_row);
             }
         }
@@ -102,15 +112,17 @@ function filter_updateToDo(option)
             if(task.ToDo[i].status == state1)
             {   
                 var tbl_row=document.createElement("tr");
-            //    
+//    
+                var chk=document.createElement("input");
+                chk.setAttribute("type","checkbox");
+                chk.setAttribute("id","checkbox"+i);
+                chk.setAttribute("onCheck","Select(this.id)");
+            //
                 tname=document.createElement("td");
                 tname.textContent=task.ToDo[i].tname;
-            //
                 var category=document.createElement("td");
                 category.textContent=task.ToDo[i].category;
             //
-               // console.log(category);
-
                 var date=document.createElement("td");
                 date.textContent=task.ToDo[i].date;
             //
@@ -119,32 +131,41 @@ function filter_updateToDo(option)
             //
                 var state = document.createElement("td");
                 state.textContent=task.ToDo[i].status;
-                state.setAttribute("id",i);
-            //                
-               // console.log(state);
-                
-                var btn = document.createElement("BUTTON");
-                var text = document.createTextNode("Complete");
-                btn.setAttribute("id",i);
-                btn.setAttribute("onClick","UpdateStatus1(this.id)");
+                state.setAttribute("id","s"+i);
             //
-                btn.appendChild(text);
+                var ebtn = document.createElement("BUTTON");
+                var etext = document.createTextNode("Edit");
+                ebtn.appendChild(etext);
+                ebtn.setAttribute("id",i);
+                ebtn.setAttribute("onClick","EditEvent(this.id)");
 
+                tbl_row.appendChild(chk);
                 tbl_row.appendChild(tname);
                 tbl_row.appendChild(desc);
                 tbl_row.appendChild(category);
                 tbl_row.appendChild(date);
                 tbl_row.appendChild(state);
-                tbl_row.appendChild(btn);
-                
-                var tbl = document.getElementById("tstyle1");
 
+                if(task.ToDo[i].status == "Pending")
+                {
+                    var btn = document.createElement("BUTTON");
+                    var text = document.createTextNode("Complete");
+                    btn.appendChild(text);
+                    btn.setAttribute("id",i);
+                    btn.setAttribute("onClick","UpdateStatus(this.id)");
+                    tbl_row.appendChild(btn);
+                }
+                
+                tbl_row.appendChild(ebtn);
+
+                var tbl = document.getElementById("tstyle");
                 tbl.appendChild(tbl_row);
             }
         }
     }
 }
 
+/*
 function UpdateStatus1(id1)
 {
     document.getElementById(id1).innerHTML="Completed";
@@ -155,10 +176,6 @@ function UpdateStatus1(id1)
     var t=localStorage.getItem(text);
     var obj= JSON.parse(t); 
 
-   // console.log(obj);  
-
-   // console.log(id1);
-    
     var tname = obj.ToDo[id1].tname;
     var desc = obj.ToDo[id1].desc;
     var date = obj.ToDo[id1].date;
@@ -191,17 +208,17 @@ function deleteTodo()
     for(var i=0;i<len;i++)
     {
        if(document.getElementById("checkbox"+i).checked)
-       {
+       {    
             delArray.push(i);
        } 
     }
 
     delArrayLength = delArray.length;
     
-    for(k=delArrayLength;k>0;k--)
+    for(k=delArrayLength-1;k>=0;k--)
     {
         task.ToDo.splice(delArray[k],1);
-        document.getElementById('tstyle').deleteRow(k);
+        document.getElementById('tstyle').deleteRow(delArray[k]);
         var obj =
         {
             uname : task.uname,
@@ -214,9 +231,9 @@ function deleteTodo()
             ToDo : task.ToDo
         };
         
-//        arr.push(obj);
-        
         localStorage.setItem(uname,JSON.stringify(obj));
         location.reload();
+        document.getElementById("chk0").checked=false;
     }    
 }
+*/
