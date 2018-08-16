@@ -29,8 +29,6 @@ for(i=0;i<len;i++)
     state.textContent=task.ToDo[i].status;
     state.setAttribute("id","s"+i);
 //
-   
-//
     var ebtn = document.createElement("BUTTON");
     var etext = document.createTextNode("Edit");
     ebtn.appendChild(etext);
@@ -106,14 +104,16 @@ function EditEvent(id)
 }
 
 function deleteTodo()
-{
+{     
     var delArray =[];
-    for(var i=0;i<len;i++)
-    {
-       if(document.getElementById("checkbox"+i).checked)
-       {    
+    for(i=0;i<len;i++)
+    {        
+        console.log(document.getElementById("checkbox"+i).checked);
+
+        if(document.getElementById("checkbox"+i).checked)
+        {    
             delArray.push(i);
-       } 
+        } 
     }
 
     delArrayLength = delArray.length;
@@ -141,7 +141,7 @@ function deleteTodo()
 }   
 
 function deleteAll()
-{
+{   
     for(i=0;i<len;i++)
     {
         document.getElementById("checkbox"+i).checked=true;

@@ -2,7 +2,7 @@ function SignIn()
 {
     var uname=document.getElementById("uName").value;
     var pwd=document.getElementById("pwd").value;
-
+alert("in");
     if(uname=="")
     {
         alert("Enter User Id...");
