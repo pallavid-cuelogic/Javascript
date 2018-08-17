@@ -315,23 +315,19 @@ table td {
     margin-top: 50px;
     margin-bottom: 30px;
 }
-.checkBox1{
-    display: block;
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 5px;
-    cursor: pointer;
-    font-size: 15px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+#updatePhoto
+{
+    margin-left: 130px;
+    height: 100px;
 }
-.checkmark{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    border-radius: 50%;
+.updateImgBtn
+{
+    width: 80px;
 }
+#setImage
+{
+    width : 60px; 
+}
+
+
+

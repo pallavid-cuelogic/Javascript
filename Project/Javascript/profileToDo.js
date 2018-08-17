@@ -9,4 +9,4 @@ document.getElementById("firstName").innerHTML = obj.firstName;
 document.getElementById("lastName").innerHTML = obj.lastName;
 document.getElementById("password").innerHTML = "******";
 document.getElementById("address").innerHTML = obj.address;
-document.getElementById("user-img").src = localStorage.getItem("img");
+document.getElementById("user-img").src = obj.image;
