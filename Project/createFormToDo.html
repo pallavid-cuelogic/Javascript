@@ -8,7 +8,7 @@
 
 <body>
     <div class="container2">
-        <image class="form-logo" src="./Images/logo.png" />
+        <img class="form-logo" src="./Images/logo.png" />
         <p class="form-line">Grab Your Events in Time</p>
     </div>
     <div class="container">
@@ -19,31 +19,31 @@
             <label for="toDoName">
                 <b>Task Name</b>
             </label>
-            <input class="input-style" type="text" id="toDoName">
+            <input class="input-style" type="text" id="toDoName" required>
             <label for="description">
                 <b>Task Description</b>
             </label>
-            <input class="input-style" type="text" id="description">
+            <input class="input-style" type="text" id="description" required>
         </div>
 
         <div class="calender">
             <p>
                 <b>Due Date:</b>
             </p>
-            <input type="date" id="dueDate" required>
+            <input type="date" id="dueDate" min="2018-08-17" max="2019-08-17" required>
         </div>
 
         <lable for="rbtn">
             <b>Category of Event</b>
         </lable>
         <div class="radio-btn">
-            <input type="radio" name="category" value="Public" id="Public">Public
+            <input type="radio" name="category" value="Public" id="Public" />Public
             <br>
-            <input type="radio" name="category" value="Private" id="Private">Private
+            <input type="radio" name="category" value="Private" id="Private" />Private
             <br>
-            <input type="radio" name="category" value="Work" id="Work">Work
+            <input type="radio" name="category" value="Work" id="Work" />Work
             <br>
-            <input type="radio" name="category" value="Study" id="Study">Study
+            <input type="radio" name="category" value="Study" id="Study" />Study
             <br>
         </div>
 

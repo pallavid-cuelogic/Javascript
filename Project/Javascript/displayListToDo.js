@@ -5,36 +5,36 @@ var object = JSON.parse(wholeObject);
 
 len = object.toDo.length;
 
-for (i = 0; i < len; i++) {
+for (iterator = 0; iterator < len; iterator++) {
     var tblRow = document.createElement("tr");
     
     var checkBoxRow = document.createElement("td");
     var checkBox = document.createElement("input");
-    chk.setAttribute("type", "checkbox");
-    chk.setAttribute("id", "checkbox" + i);
-    chk.setAttribute("onCheck", "Select(this.id)");
+    checkBox.setAttribute("type", "checkbox");
+    checkBox.setAttribute("id", "checkbox" + iterator);
+    checkBox.setAttribute("onCheck", "Select(this.id)");
     checkBoxRow.appendChild(checkBox);
     
     toDoName = document.createElement("td");
-    toDoName.textContent = object.toDo[i].toDoName;
+    toDoName.textContent = object.toDo[iterator].toDoName;
     
     var category = document.createElement("td");
-    category.textContent = object.toDo[i].category;
+    category.textContent = object.toDo[iterator].category;
     
     var dueDate = document.createElement("td");
-    dueDate.textContent = object.toDo[i].dueDate;
+    dueDate.textContent = object.toDo[iterator].dueDate;
     
     var description = document.createElement("td");
-    description.textContent = object.toDo[i].description;
+    description.textContent = object.toDo[iterator].description;
     
-    var status = document.createElement("td");
-    status.textContent = object.toDo[i].status;
-    status.setAttribute("id", "s"+i);
+    var statu = document.createElement("td");
+    statu.textContent = object.toDo[iterator].status;
+    statu.setAttribute("id","s"+iterator);
     
     var editBtn = document.createElement("BUTTON");
     var eText = document.createTextNode("Edit");
     editBtn.appendChild(eText);
-    editBtn.setAttribute("id", i);
+    editBtn.setAttribute("id", iterator);
     editBtn.setAttribute("onClick", "editEvent(this.id)");
 
     tblRow.appendChild(checkBoxRow);
@@ -42,13 +42,13 @@ for (i = 0; i < len; i++) {
     tblRow.appendChild(description);
     tblRow.appendChild(category);
     tblRow.appendChild(dueDate);
-    tblRow.appendChild(status);
+    tblRow.appendChild(statu);
 
-    if (task.ToDo[i].status == "Pending") {
+    if (object.toDo[iterator].status == "Pending") {
         var btn = document.createElement("BUTTON");
         var bText = document.createTextNode("Complete");
         btn.appendChild(bText);
-        btn.setAttribute("id", i);
+        btn.setAttribute("id", iterator);
         btn.setAttribute("onClick", "updateStatus(this.id)");
         tblRow.appendChild(btn);
     }
@@ -65,7 +65,7 @@ function updateStatus(rowId) {
     if (result == true) {
         document.getElementById("s" + rowId).innerHTML = "Completed";
 
-        document.getElementById(id1).style.display="none";
+        document.getElementById(rowId).style.display="none";
 
         var userName = localStorage.getItem("id");
         
@@ -99,21 +99,20 @@ function editEvent(rowId) {
 }
 
 function deleteTodo() {
-
     var result = confirm("Are you sure want to delete this todo?");
     if (result == true) {
         var delArray = [];
-        for (i = 0; i < len; i++) {
-            if (document.getElementById("checkbox" + i).checked) {
-                delArray.push(i);
+        for (iterator = 0; iterator < len; iterator++) {
+            if (document.getElementById("checkbox"+iterator).checked) {
+                delArray.push(iterator);
             }
         }
 
         delArrayLength = delArray.length;
 
-        for (k = delArrayLength - 1; k >= 0; k--) {
-            object.toDo.splice(delArray[k], 1);
-            document.getElementById('tstyle').deleteRow(delArray[k]);
+        for (iterator = delArrayLength - 1; iterator >= 0; iterator--) {
+            object.toDo.splice(delArray[iterator], 1);
+            document.getElementById('tstyle').deleteRow(delArray[iterator]);
             var object1={
                 userName : object.userName,
                 firstName : object.firstName,
@@ -125,16 +124,28 @@ function deleteTodo() {
                 toDo : object.toDo
             };
 
-            localStorage.setItem(uname, JSON.stringify(object1));
+            localStorage.setItem(userName, JSON.stringify(object1));
             location.reload();
-            document.getElementById("chk0").checked = false;
+            document.getElementById("checkBox").checked = false;
         }
     }
+    document.getElementById("chk0").checked = false;
 }
 
-function deleteAll() {
-    for (i = 0; i < len; i++) {
-        document.getElementById("checkbox" + i).checked = true;
+function toggle() {
+    var check=document.getElementById("checkBox").checked;
+
+    if(check==true)
+    {
+        for (iterator = 0; iterator < len; iterator++) {
+            document.getElementById("checkbox"+ iterator).checked = true;
+        }
+    }
+    else
+    {
+        for (iterator = 0; iterator < len; iterator++) {
+            document.getElementById("checkbox"+ iterator).checked = false;
+        }
     }
 }
 

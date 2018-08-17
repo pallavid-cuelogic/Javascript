@@ -17,24 +17,54 @@ function listStore() {
         var category = document.getElementById("Study").value;
     }
 
-    var object=
+    var result=validateToDo(toDoName,dueDate);
+    
+    if(result==true)
     {
-        toDoName : toDoName,
-        description : description,
-        dueDate : dueDate,
-        category : category,
-        status : status
-    };
+        var object=
+        {
+            toDoName : toDoName,
+            description : description,
+            dueDate : dueDate,
+            category : category,
+            status : status
+        };
 
-    var userName = localStorage.getItem("id");
+        var userName = localStorage.getItem("id");
 
-    var wholeObject = localStorage.getItem(userName);
-    var object1 = JSON.parse(wholeObject);
+        var wholeObject = localStorage.getItem(userName);
+        var object1 = JSON.parse(wholeObject);
 
-    object1.toDo.push(object);
+        object1.toDo.push(object);
 
-    object2 = JSON.stringify(object1);
-    localStorage.setItem(text, object2);
+        object2 = JSON.stringify(object1);
+        localStorage.setItem(userName, object2);
 
-    window.location.href = "formToDo.html";
+        window.location.href = "formToDo.html";
+    }
+}
+
+function validateToDo(toDoName,dueDate)
+{
+    if(toDoName == "")
+    {
+        alert("Enter task name.");
+        return false;
+    }
+
+    var currentDate=new Date();
+
+    var getDate=currentDate.getDate();
+    var getMonth=currentDate.getMonth();
+    var getYear=currentDate.getYear();
+
+    var arrayDateSplit=dueDate.split("-");
+
+    if(arrayDateSplit[0]<getYear || arrayDateSplit[1]< getMonth || arrayDateSplit[2]<getDate)
+    {
+        alert("Wrong date");
+        return false;
+    }
+    
+    return true;
 }

@@ -1,6 +1,6 @@
 function store() {
 
-    //   localStorage.clear();
+//   localStorage.clear();
 
     var userName = document.getElementById("userName").value;
     var firstName = document.getElementById("firstName").value;
@@ -22,9 +22,9 @@ function store() {
         console.log('Error: ', error);
     }
 
-    var img = localStorage.getItem("img");
+    var image = localStorage.getItem("img");
 
-    console.log(img);
+    console.log(image);
 
     var obj = {
         userName : userName,
@@ -33,7 +33,7 @@ function store() {
         password : password,
         address : address,
         gender : gender,
-        img : img,
+        image : image,
         toDo : []
     };
 

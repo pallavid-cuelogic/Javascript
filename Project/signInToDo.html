@@ -1,5 +1,4 @@
 <html>
-
 <head>
     <meta charset="UTF-8">
     <link href='./CSS/style.css' type='text/css' rel="stylesheet">
@@ -7,11 +6,9 @@
 </head>
 
 <body>
-    <script src='./Javascript/signInValidateToDo.js'></script>
     <div class="container">
-        <image class="logo-img" src="./Images/logo.png" />
+        <img class="logo-img" src="./Images/logo.png" />
         <p class="line">Grab Your Events in Time</p>
-        <form onsubmit="signIn()">
             <div class="details">
                 <label for="userName">
                     <b>User Name</b>
@@ -22,12 +19,11 @@
                 </label>
                 <input class="input-style" type="password" placeholder="*****" id="password" required>
                 <div class="SignIn-btn">
-                    <button onclick="signIn()" type="button">Login</button>
-                    <button id="SignIn-btn4" onclick="window.location.href='signUpToDo.html'" type="submit">Sign Up</button>
-        </form>
-        </div>
+                    <button onclick="signIn()" type="button" >Login</button>
+                    <button id="SignIn-btn4" onclick="window.location.href='signUpToDo.html'" type="button">Sign Up</button>
+                </div>
         </div>
     </div>
 </body>
-
+<script src='./Javascript/signInValidateToDo.js'></script>
 </html>

@@ -41,37 +41,37 @@ function filterUpdateToDo(option) {
     if (option == 1) {
         var cat = document.getElementById("category1").value;
 
-        for (i = 0; i < len; i++) {
-            if (object.toDo[i].category == cat) {
+        for (iterator = 0; iterator < len; iterator++) {
+            if (object.toDo[iterator].category == cat) {
                 
                 var tblRow = document.createElement("tr");
                 
                 var checkBoxRow = document.createElement("td");    
                 var checkBox = document.createElement("input");
                 checkBox.setAttribute("type", "checkbox");
-                checkBox.setAttribute("id", "checkbox" + i);
+                checkBox.setAttribute("id", "checkbox" + iterator);
                 checkBoxRow.appendChild(checkBox);
                 
                 toDoName = document.createElement("td");
-                toDoName.textContent = object.toDo[i].toDoName;
+                toDoName.textContent = object.toDo[iterator].toDoName;
 
                 var category = document.createElement("td");
-                category.textContent = object.toDo[i].category;
+                category.textContent = object.toDo[iterator].category;
                 
                 var dueDate = document.createElement("td");
-                dueDate.textContent = object.toDo[i].dueDate;
+                dueDate.textContent = object.toDo[iterator].dueDate;
                 
                 var description = document.createElement("td");
-                description.textContent = object.toDo[i].description;
+                description.textContent = object.toDo[iterator].description;
                 
                 var status = document.createElement("td");
-                status.textContent = object.toDo[i].status;
-                status.setAttribute("id", "s" + i);
+                status.textContent = object.toDo[iterator].status;
+                status.setAttribute("id", "s" + iterator);
                 
                 var editBtn = document.createElement("BUTTON");
                 var eText = document.createTextNode("Edit");
                 editBtn.appendChild(eText);
-                editBtn.setAttribute("id", i);
+                editBtn.setAttribute("id", iterator);
                 editBtn.setAttribute("onClick", "editEvent(this.id)");
 
                 tblRow.appendChild(checkBoxRow);
@@ -81,11 +81,11 @@ function filterUpdateToDo(option) {
                 tblRow.appendChild(dueDate);
                 tblRow.appendChild(status);
 
-                if (task.ToDo[i].status == "Pending") {
+                if (object.toDo[iterator].status == "Pending") {
                     var btn = document.createElement("BUTTON");
                     var bText = document.createTextNode("Complete");
                     btn.appendChild(bText);
-                    btn.setAttribute("id", i);
+                    btn.setAttribute("id", iterator);
                     btn.setAttribute("onClick", "updateStatus(this.id)");
                     tblRow.appendChild(btn);
                 }
@@ -100,36 +100,36 @@ function filterUpdateToDo(option) {
     else if (option == 2) {
         var state1 = document.getElementById("status1").value;
 
-        for (i = 0; i < len; i++) {
-            if (object.toDo[i].status == state1) {
+        for (iterator = 0; iterator < len; iterator++) {
+            if (object.toDo[iterator].status == state1) {
                 var tblRow = document.createElement("tr");
                 
                 var checkBoxRow = document.createElement("td");    
                 var checkBox = document.createElement("input");
                 checkBox.setAttribute("type", "checkbox");
-                checkBox.setAttribute("id", "checkbox" + i);
+                checkBox.setAttribute("id", "checkbox" + iterator);
                 checkBoxRow.appendChild(checkBox);
                 
                 toDoName = document.createElement("td");
-                toDoName.textContent = object.toDo[i].toDoName;
+                toDoName.textContent = object.toDo[iterator].toDoName;
 
                 var category = document.createElement("td");
-                category.textContent = object.toDo[i].category;
+                category.textContent = object.toDo[iterator].category;
                 
                 var dueDate = document.createElement("td");
-                dueDate.textContent = object.toDo[i].dueDate;
+                dueDate.textContent = object.toDo[iterator].dueDate;
                 
                 var description = document.createElement("td");
-                description.textContent = object.toDo[i].description;
+                description.textContent = object.toDo[iterator].description;
                 
                 var status = document.createElement("td");
-                status.textContent = object.toDo[i].status;
-                status.setAttribute("id", "s" + i);
+                status.textContent = object.toDo[iterator].status;
+                status.setAttribute("id", "s" + iterator);
                 
                 var editBtn = document.createElement("BUTTON");
                 var eText = document.createTextNode("Edit");
                 editBtn.appendChild(eText);
-                editBtn.setAttribute("id", i);
+                editBtn.setAttribute("id", iterator);
                 editBtn.setAttribute("onClick", "editEvent(this.id)");
 
                 tblRow.appendChild(checkBoxRow);
@@ -139,11 +139,11 @@ function filterUpdateToDo(option) {
                 tblRow.appendChild(dueDate);
                 tblRow.appendChild(status);
 
-                if (task.ToDo[i].status == "Pending") {
+                if (object.toDo[iterator].status == "Pending") {
                     var btn = document.createElement("BUTTON");
                     var bText = document.createTextNode("Complete");
                     btn.appendChild(bText);
-                    btn.setAttribute("id", i);
+                    btn.setAttribute("id", iterator);
                     btn.setAttribute("onClick", "updateStatus(this.id)");
                     tblRow.appendChild(btn);
                 }

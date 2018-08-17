@@ -8,7 +8,7 @@
 
 <body>
     <div class="container2">
-        <image class="form-logo" src="./Images/logo.png" />
+        <img class="form-logo" src="./Images/logo.png" />
         <p class="form-line">Grab Your Events in Time</p>
     </div>
     <div class="container">
@@ -16,39 +16,51 @@
             <b>Create Events List</b>
         </p>
         <div class="form-details">
-            <label for="tname">
+            <label for="toDoName">
                 <b>Task Name</b>
             </label>
-            <input class="input-style" type="text" id="tname">
-            <label for="desc">
+            <input class="input-style" type="text" id="toDoName">
+            <label for="description">
                 <b>Task Description</b>
             </label>
-            <input class="input-style" type="text" id="desc">
+            <input class="input-style" type="text" id="description">
         </div>
 
         <div class="calender">
             <p>
                 <b>Due Date:</b>
             </p>
-            <input type="date" id="date" required>
+            <input type="date" id="dueDate" min="2018-08-17" max="2019-08-17" required>
         </div>
 
-        <div class="radio-btn">
-            <input type="radio" name="cat" value="Public" id="Public">Public
-            <br>
-            <input type="radio" name="cat" value="Private" id="Private">Private
-            <br>
-            <input type="radio" name="cat" value="Work" id="Work">Work
-            <br>
-            <input type="radio" name="cat" value="Study" id="Study">Study
-            <br>
+        <div>
+            <lable class="checkBox1">Public
+                <input type="radio" name="cat" value="Public" id="Public">
+                <span class="checkmark"></span>
+            </lable>
+
+            <lable class="checkBox1">Private
+                <input type="radio" name="cat" value="Private" id="Private">
+                <span class="checkmark"></span>
+            </lable>
+
+            <lable class="checkBox1">Work
+                <input type="radio" name="cat" value="Work" id="Work">
+                <span class="checkmark"></span>
+            </lable>
+
+            <lable class="checkBox1">Study
+                <input type="radio" name="cat" value="Study" id="Study">
+                <span class="checkmark"></span>
+            </lable>
         </div>
 
-        <div class="modify-btn">
+        <div class="modify-btn1">
             <button onclick="updateToDo()" type="submit">Update</button>
         </div>
     </div>
 </body>
-<script src="Javascript/editEventToDo.js"> </script>
+<script src="Javascript/editEventToDo.js">
+</script>
 
 </html>

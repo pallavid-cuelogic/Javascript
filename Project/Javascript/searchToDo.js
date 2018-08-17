@@ -4,38 +4,30 @@ function search() {
     var userName = localStorage.getItem("id");
 
     var wholeObject = localStorage.getItem(userName);
-    var obejct = JSON.parse(wholeObject);
+    var object = JSON.parse(wholeObject);
 
-    len = obejct.toDo.length;
+    len = object.toDo.length;
 
-    for (i = 0; i < len; i++) {
-        if (object.toDo[i].toDoName == toDoName) {
+    for (iterator = 0; iterator < len; iterator++) {
+        if (object.toDo[iterator].toDoName == toDoName) {
             var tblRow = document.createElement("tr");
-              
-            var checkBoxRow = document.createElement("input");
-            var checkBox = document.createElement("input");
-            checkBox.setAttribute("type", "checkbox");
-            checkBox.setAttribute("id", "checkbox" + i);
-            checkBox.setAttribute("onCheck", "Select(this.id)");
-            checkBoxRow.appendChild(checkBox);
-            
+                              
             toDoName = document.createElement("td");
-            toDoName.textContent = object.toDo[i].toDoName;
+            toDoName.textContent = object.toDo[iterator].toDoName;
 
             var category = document.createElement("td");
-            category.textContent = object.toDo[i].category;
+            category.textContent = object.toDo[iterator].category;
             
             var dueDate = document.createElement("td");
-            dueDate.textContent = object.toDo[i].dueDate;
+            dueDate.textContent = object.toDo[iterator].dueDate;
             
             var description = document.createElement("td");
-            description.textContent = object.toDo[i].description;
+            description.textContent = object.toDo[iterator].description;
             
             var status = document.createElement("td");
-            status.textContent = object.toDo[i].status;
-            status.setAttribute("id", i);
+            status.textContent = object.toDo[iterator].status;
+            status.setAttribute("id", iterator);
             
-            tblRow.appendChild(checkBox);
             tblRow.appendChild(toDoName);
             tblRow.appendChild(description);
             tblRow.appendChild(category);
@@ -50,7 +42,7 @@ function search() {
         }
     }
 
-    if (len == i) {
+    if (len == iterator) {
         alert("Task doesn't exists.");
     }
 
