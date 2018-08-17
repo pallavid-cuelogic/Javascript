@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link href='./CSS/style.css' type='text/css' rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+</head>
+
+<body>
+    <script src='./Javascript/signInValidateToDo.js'></script>
+    <div class="container">
+        <image class="logo-img" src="./Images/logo.png" />
+        <p class="line">Grab Your Events in Time</p>
+        <form onsubmit="signIn()">
+            <div class="details">
+                <label for="userName">
+                    <b>User Name</b>
+                </label>
+                <input class="input-style" type="text" placeholder="e.g.  DennisRitchie@gmail.com" id="userName" required>
+                <label for="password">
+                    <b>Password</b>
+                </label>
+                <input class="input-style" type="password" placeholder="*****" id="password" required>
+                <div class="SignIn-btn">
+                    <button onclick="signIn()" type="button">Login</button>
+                    <button id="SignIn-btn4" onclick="window.location.href='signUpToDo.html'" type="submit">Sign Up</button>
+        </form>
+        </div>
+        </div>
+    </div>
+</body>
+
+</html>

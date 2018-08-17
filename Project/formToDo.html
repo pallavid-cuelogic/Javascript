@@ -1,0 +1,75 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link href='./CSS/style.css' type='text/css' rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container2">
+        <image class="form-logo" src="./Images/logo.png" />
+        <p class="form-line">Grab Your Events in Time</p>
+    </div>
+    <div id="Logout-btn">
+        <button onclick="window.location.href='profilepageToDo.html'" type="submit">Profile</button>
+        <button onclick="window.location.href='logoutToDo.html'" type="submit">Log Out</button>
+    </div>
+    <div class="container4">
+        <div class="form-btn">
+            <button onclick="window.location.href='createFormToDo.html'" type="submit">Create</button>
+            <button onclick="deleteTodo()" id="form-btn2" type="submit">Delete</button>
+            <button onclick="window.location.href='searchFormToDo.html'" id="form-btn3" type="submit">Search</button>
+            <button onclick="filterButton()" type="submit" id="filterBtn">Filter</button>
+        </div>
+    </div>
+    <div class="container7" id="con4">
+        <div class="modify-btn">
+            <button onclick="categoryButton()" type="button" id="category">FilterBy Category</button>
+            <button onclick="statusButton()" type="button" id="status">FilterBy Status</button>
+        </div>
+        <div>
+            <div id="categorySelect">
+                <label class="cat1" for="category">
+                    <b>Category</b>
+                </label>
+                <select onclick="filter_updateToDo(1)" id="category1">
+                    <option value="Public">Public</option>
+                    <option value="Private">Private</option>
+                    <option value="Work">Work</option>
+                    <option value="Study">Study</option>
+                </select>
+            </div>
+            <div id="statusSelect">
+                <label class="cat1" for="status">
+                    <b>Status</b>
+                </label>
+                <select onclick="filter_updateToDo(2)" id="status1">
+                    <option value="Pending">Pending</option>
+                    <option value="Completed">Completed</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="container3">
+        <p class="form-text">
+            <b>Events List</b>
+        </p>
+        <table id="tstyle">
+            <tr>
+                <th id="th1">
+                    <input id="chk0" type="checkbox" onchange="deleteAll()" name="chkF">
+                </th>
+                <th>Task</th>
+                <th id="des">Description</th>
+                <th id="th2">Type</th>
+                <th>Due Date</th>
+                <th id="th3">Status</th>
+            </tr>
+        </table>
+    </div>
+</body>
+<script src="Javascript/displayListToDo.js"> </script>
+<script src="Javascript/filterToDo.js"> </script>
+
+</html>

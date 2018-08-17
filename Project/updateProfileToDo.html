@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link href='./CSS/style.css' type='text/css' rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <image class="logo-img" src="./Images/logo.png" />
+        <p class="line">Grab Your Events in Time</p>
+        <div class="details">
+            <label for="userName">
+                <b>User Name</b>
+            </label>
+            <input class="input-style" type="text" placeholder="e.g.  AryaStark@gmail.com" id="userName" readonly>
+            <label for="firstName">
+                <b>First Name</b>
+            </label>
+            <input class="input-style" type="text" placeholder="First Name" id="firstName" value="" required>
+            <label for="lastName">
+                <b>Last Name</b>
+            </label>
+            <input class="input-style" type="text" placeholder="Last Name" id="lastName" required>
+            <label for="password">
+                <b>Password</b>
+            </label>
+            <input class="input-style" type="password" placeholder="*****" id="password" required>
+            <label for="address">
+                <b>Address</b>
+            </label>
+            <input class="address-box" type="text" id="address">
+
+            <button class="register-btn" type="submit" onclick="display();">Update</button>
+
+        </div>
+    </div>
+</body>
+<script src="./Javascript/updateProfileToDo.js"></script>
+<script src="Javascript/validationToDo.js"> </script>
+
+
+</html>

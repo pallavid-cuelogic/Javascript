@@ -13,6 +13,14 @@ body
     padding: 20px;
     border-radius: 25px;   
 }
+.container7
+{
+	width: 600px;
+	margin: 0 auto;
+    text-align: center;
+	height: auto;
+    display: block;
+}
 .container4
 {
 	width: 600px;
@@ -179,12 +187,6 @@ body
     margin-top: -10px;
     font-size: 40px;
 }
-.modify-btn
-{
-    margin-bottom: 50px;
-    margin-top: 45px;
-    margin-right: 20px; 
-}
 .form-create
 {
     display: inline-block;
@@ -241,12 +243,25 @@ table
 {
     border-collapse: collapse;
     width: 100%;
+    table-layout: fixed;
 }
 td, th
 {
     border: 2px solid black;
     text-align: left;
     padding: 8px;
+}
+table th
+{
+    border: 2px solid black;
+    width: auto;
+    word-wrap:break-word;
+}
+table td
+{
+    border: 2px solid black;
+    width: auto;
+    word-wrap:break-word;
 }
 #tstyle
 {
@@ -269,10 +284,6 @@ td, th
 #todo-input
 {
     margin-top: 20px;
-}
-.filter-btn
-{
-    margin-left: 800px;
 }
 .userpic
 {
@@ -298,7 +309,20 @@ td, th
 {
     margin-left: 30px;
 }
-.cat1
+#category1
 {
-    margin-left: 850px;
+    margin-top: 10px;
+}
+#status1
+{
+    margin-top: 10px;
+}
+.modify-btn1
+{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+#chk0
+{
+    text-align: center;
 }

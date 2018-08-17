@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link href='./CSS/style.css' type='text/css' rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container2">
+        <image class="form-logo" src="./Images/logo.png" />
+        <p class="form-line">Grab Your Events in Time</p>
+    </div>
+    <div class="container">
+        <p class="form-text">
+            <b>Create Events List</b>
+        </p>
+        <div class="form-details">
+            <label for="tname">
+                <b>Task Name</b>
+            </label>
+            <input class="input-style" type="text" id="tname">
+            <label for="desc">
+                <b>Task Description</b>
+            </label>
+            <input class="input-style" type="text" id="desc">
+        </div>
+
+        <div class="calender">
+            <p>
+                <b>Due Date:</b>
+            </p>
+            <input type="date" id="date" required>
+        </div>
+
+        <div class="radio-btn">
+            <input type="radio" name="cat" value="Public" id="Public">Public
+            <br>
+            <input type="radio" name="cat" value="Private" id="Private">Private
+            <br>
+            <input type="radio" name="cat" value="Work" id="Work">Work
+            <br>
+            <input type="radio" name="cat" value="Study" id="Study">Study
+            <br>
+        </div>
+
+        <div class="modify-btn">
+            <button onclick="updateToDo()" type="submit">Update</button>
+        </div>
+    </div>
+</body>
+<script src="Javascript/editEventToDo.js"> </script>
+
+</html>
