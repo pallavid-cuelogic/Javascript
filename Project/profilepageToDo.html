@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link href='./CSS/style.css' type='text/css' rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <image class="logo-img" src="./Images/logo.png" />
+        <p class="line">Grab Your Events in Time</p>
+        <div class="details">
+            <div class="userpic">
+                <p class="Profile-text">
+                    <b>Your Profile</b>
+                </p>
+                <img src="" id="user-img" height="100px" />
+            </div>
+            <label for="userName">
+                <b>User Name</b>
+            </label>
+            <p id="userName"></p>
+
+            <label for="firstName">
+                <b>First Name</b>
+            </label>
+            <p id="firstName"></p>
+
+            <label for="lastName">
+                <b>Last Name</b>
+            </label>
+            <p id="lastName"></p>
+
+            <label for="password">
+                <b>Password</b>
+            </label>
+            <p id="password"></p>
+
+            <label for="address">
+                <b>Address</b>
+            </label>
+            <p id="address"></p>
+
+            <button class="Edit-btn" type="submit" onclick="window.location.href='updateProfileToDo.html'">Edit</button>
+            <button id="ProfileToList" type="submit" onclick="window.location.href='formToDo.html'">Back</button>
+
+        </div>
+    </div>
+</body>
+<script src="./Javascript/profileToDo.js"></script>
+
+</html>

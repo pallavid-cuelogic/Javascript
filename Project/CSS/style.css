@@ -1,0 +1,328 @@
+body
+{
+    font-family: 'Quicksand', sans-serif;
+}
+.container
+{
+	width: 600px;
+	margin: 0 auto;
+    text-align: center;
+	height: auto;
+    display: block;
+    border: 15px solid #54CA9E;
+    padding: 20px;
+    border-radius: 25px;   
+}
+.container7
+{
+	width: 600px;
+	margin: 0 auto;
+    text-align: center;
+	height: auto;
+    display: block;
+}
+.container4
+{
+	width: 600px;
+	margin: 0 auto;
+    text-align: center;
+	height: auto;
+    display: block;
+    border: 10px solid #54CA9E;
+    padding: 20px;
+    border-radius: 25px;   
+}
+.container6
+{
+	width: 1600px;
+	margin: 0 auto;
+    text-align: center;
+	height: auto;
+    display: block;
+}
+.container2
+{
+    width: 1190px;
+    margin: 0 auto;
+    text-align: center;
+    height: 190px;
+    background-color: #54CA9E;
+}
+.container3
+{
+    width: 950px;
+	margin: 0 auto;
+    text-align: center;
+	height: auto;
+    display: block;
+    border: 15px solid #54CA9E;
+    padding: 20px;
+    border-radius: 25px;   
+}
+.container5
+{
+	width: 800px;
+	margin: 0 auto;
+    text-align: center;
+	height: auto;
+    display: block;
+    border: 15px solid #54CA9E;
+    padding: 20px;
+    border-radius: 25px;   
+}
+.form-logo
+{
+    margin-top: 10px;
+}
+.form-line
+{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    color: white;
+    margin-top: -1px;
+}
+.form-btn
+{
+    margin-top: 10px;
+}
+#form-btn2
+{
+    margin-left: 30px;
+}
+#form-btn3
+{
+    margin-left: 30px;
+}
+.form-text
+{
+    margin-top: 0%;
+    font-size: 35px;
+    margin-bottom: 0px;
+}
+.logo-img
+{
+    margin-top: 10px;
+}
+.line
+{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    color: #54CA9E;
+    margin-top: -1px;
+}
+.details
+{
+    text-align: left;
+    display: inline-grid;
+    font-size: 20px;
+    margin-top: 30px;
+}
+.address-box
+{
+    margin-bottom: 30px;
+    height: 85px;
+}
+#btn
+{
+    height: 35px;
+    width: 85px;
+}
+.input-style
+{
+    width: 400px;
+    height: 35px;
+    margin-bottom: 30px;
+}
+.select-style
+{
+    width: 100px;
+    margin-bottom: 30px;
+}
+.register-btn
+{
+    margin-bottom: 10px;
+    margin-left: 160px;
+    height: 35px;
+    width: 85px;
+}
+#register-btn:hover
+{
+    background-color: #C9CCD1;
+}
+#btn:hover
+{
+    background-color: #C9CCD1;
+}
+#sign-in
+{
+    border-radius: 20px;
+    margin-left: 8px;
+    padding: 5px;
+    color: black;
+    background-color: #C9CCD1;
+    text-decoration: none;
+}
+#text-signIn
+{
+    margin-top: 20px;
+    margin-bottom: 80px;
+    margin-left: 50px;
+    font-size: 15px;
+    color: blue;
+}
+.Profile-btn
+{
+    height: 33px;
+    margin-left: 160px;
+    width: 85px;
+}
+.Edit-btn
+{
+    margin-bottom: 10px;
+    margin-left: 70px;
+    width: 65px;
+}
+.Profile-text
+{
+    margin-top: -10px;
+    font-size: 40px;
+}
+.form-create
+{
+    display: inline-block;
+}
+.form-details
+{
+    text-align: left;
+    display: inline-grid;
+    font-size: 15px;
+}
+.radio-btn
+{
+    width: 200px;
+	margin: 0 auto;
+    height: 90px;
+}
+.calender
+{
+    margin-left: 100px;
+    text-align: left;
+    margin-bottom: 30px;
+}
+#ProfileToList
+{
+    margin-bottom: 40px;
+    margin-left: 65px;
+    width: 75px;
+}
+.SignIn-btn
+{
+    margin-top: 30px;
+    margin-left: 100px;
+    display: inline-block;
+    margin-bottom: 28px;
+}
+#SignIn-btn4
+{
+    margin-left: 30px;
+}
+#Logout-btn
+{
+    margin-top: 5px;
+    text-align: center;
+}
+#Logout-btn2
+{
+    margin-left: 20px;
+}
+.ProfilePic-style
+{
+    margin-bottom: 30px;
+}
+table
+{
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+}
+td, th
+{
+    border: 2px solid black;
+    text-align: left;
+    padding: 8px;
+}
+table th
+{
+    border: 2px solid black;
+    width: auto;
+    word-wrap:break-word;
+}
+table td
+{
+    border: 2px solid black;
+    width: auto;
+    word-wrap:break-word;
+}
+#tstyle
+{
+    margin: 0 auto;
+}
+#cat
+{
+    margin-bottom: 20px;
+}
+#tstyle1
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#todo-style
+{
+    width: 250px;
+    height: 35px;
+}
+#todo-input
+{
+    margin-top: 20px;
+}
+.userpic
+{
+    text-align: center;
+}
+#user-img
+{
+    margin-bottom: 20px;
+}
+#th1
+{
+    width : 30px;
+}
+#th2
+{
+    width : 60px;
+}
+#th3
+{
+    width : 100px;
+}
+#filterbtn
+{
+    margin-left: 30px;
+}
+#category1
+{
+    margin-top: 10px;
+}
+#status1
+{
+    margin-top: 10px;
+}
+.modify-btn1
+{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+#chk0
+{
+    text-align: center;
+}
